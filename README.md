@@ -1,3 +1,4 @@
-# My Awesome Book
+# 前言
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+本书用于Magento 学习的第二阶段,主要针对专门的类和方法进行详细介绍.
+

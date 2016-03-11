@@ -17,4 +17,7 @@
    * [Controller](controller.md)
    * [Block](block.md)
    * [Model](model.md)
+* [布局文件详解](layout.md)
+   * [reference](layout_reference.md)
+   * [block](layout_block.md)
 

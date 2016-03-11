@@ -10,7 +10,6 @@
 		@param 显示列数	
 		-->
 		<action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
-
 		<!--
 		设置工具条布局名称
 		@param 名称 
@@ -35,6 +34,34 @@
 		-->
         <action method="setSortBy"><param>popular</param></action>
     </block>
+
+### 分页工具条
+#### `page/html_pager`
+	
+	<block type="page/html_pager" name="product_list_toolbar_pager">
+		<!--
+		设置List 格式输出每页数量
+		@param 数量
+		-->
+		<action method="setDefaultListPerPage"><limit>4</limit></action>
+        <!--
+		设置Grid 格式输出每页数量
+		@param 数量
+		-->
+		<action method="setDefaultGridPerPage"><limit>9</limit></action>
+		<!--
+		添加每页显示数量
+		@param 显示模式
+		@param 数量或者all
+		@param 输出标签
+		-->
+        <action method="addPagerLimit"><mode>list</mode><limit>2</limit></action>
+        <action method="addPagerLimit" translate="label">
+				<mode>list</mode>
+				<limit>all</limit>
+				<label>All</label>
+		</action>
+	</block>
 
 
 

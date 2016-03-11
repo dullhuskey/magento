@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Layout 布局文件的日常使用操作
 
 ### 产品列表
@@ -62,13 +63,4 @@
 				<label>All</label>
 		</action>
 	</block>
-
-
-
-
-	
-    
-
-
-
 

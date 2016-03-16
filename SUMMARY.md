@@ -16,7 +16,7 @@
 * [框架详解](frame.md)
    * [Controller](controller.md)
    * [Block](block.md)
-       * Widget
+       * [Widget](widget.md)
    * [Model](model.md)
 * [布局文件详解](layout.md)
    * [reference](layout_reference.md)

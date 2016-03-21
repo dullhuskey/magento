@@ -20,7 +20,26 @@
       "filter"    => false,  // 是否过滤
       "sortable"  => false,  // 是否允许排序
       "is_system" => true,   //是否系统自带
+      'renderer' => 'Dullhuskey_Rewrite_Block_Adminhtml_Searchkeywords_Renderer_Image'  // 重新渲染内容
     )
+    
+    
+    //renderer
+    
+    class Dullhuskey_Rewrite_Block_Adminhtml_Searchkeywords_Renderer_Test extends Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Abstract{
+      public function render(Varien_Object $row)
+      {
+          return $this->_getValue($row);    // 返回整行的值
+      }
+      protected function _getValue(Varien_Object $row)
+      {
+          $val = $row->getData($this->getColumn()->getIndex());
+          $out = "Render Test :{$val}";
+          return $out;
+      }
+    }
+    
+    
     
     // text/default
     $this->addColumn('real_order_id', array(
@@ -93,6 +112,21 @@
                   )
               )
       ));
+      
+     //image 
+    $this->addColumn('image',
+          array(
+              'header'=> Mage::helper('catalog')->__('Image'),
+              'type'  => 'image',
+              'index' => 'image',
+    ));
+
+  
+    
+    
+   
+   
+   
     
     
     

@@ -16,7 +16,10 @@
       "header" => "标题",
       "index"  => "与collection对应的取值名称",
       "type"   => "列格式类型",
-      "width"  => "列显示宽度"    
+      "width"  => "列显示宽度",
+      "filter"    => false,  // 是否过滤
+      "sortable"  => false,  // 是否允许排序
+      "is_system" => true,   //是否系统自带
     )
     
     // text/default
@@ -74,6 +77,21 @@
           'type'      => 'store',
           'store_view'=> true,
           'display_deleted' => true,
+      ));
+      
+    // action  
+    $this->addColumn('action',
+          array(
+              'header'    => Mage::helper('sales')->__('Action'),
+              'type'      => 'action',
+              'getter'     => 'getId',
+              'actions'   => array(
+                  array(
+                      'caption' => Mage::helper('sales')->__('View'),
+                      'url'     => array('base'=>'*/sales_order/view'),
+                      'field'   => 'order_id'
+                  )
+              )
       ));
     
     
